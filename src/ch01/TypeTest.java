@@ -1,14 +1,16 @@
+package ch01;
+
 public class TypeTest {
     static void main() {
         //자바에서 타입은 기본 타입 8개
         boolean isBool = true;  //true / false
         char ch = 'a'; //작은 따옴표로 문자 하나만 표시 이때 문자는 전부 정수로 변환 가능하다.
-        byte b = 127;  // -128 ~ 127  1byte  정수  8bit
-        short sh = 10000; // 2의 16승
-        int num = 19_09899_800; //2의 32승
-        long long_num = 1999999999989898392L;
+        byte b = 127;  // -128 ~ 127  1byte  정수  8bit(1,0)  = 1byte
+        short sh = 10000; // 2의 16승              16bit = 2byte
+        int num = 19_09899_800; //2의 32승         32bit = 4byte
+        long long_num = 1999999999989898392l;  // 64bit = 8byte
         float num_float=0.2f;
-        double num_double;
+        double num_double = 0.2;
         System.out.println(isBool);
         char ch02 = 65; // 65 - 'A', 66 - 'B'
         char ch03 = 24373; // 65 - 'A', 66 - 'B'  44032~55203 사이의 정수를 char로 바꾸면 한글이 나온다.
@@ -24,6 +26,7 @@ public class TypeTest {
         System.out.println(PI);
 
         //type casting  形변환
+
         int num04 = 300;
         System.out.println(num04*3.14);
         System.out.println(314/(double)10);

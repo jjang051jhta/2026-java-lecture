@@ -1,3 +1,5 @@
+package ch01;
+
 public class LogicalOperator {
         public static void main (String[] args) {
             // 비교 연산

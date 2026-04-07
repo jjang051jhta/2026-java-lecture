@@ -1,3 +1,5 @@
+package ch01;
+
 public class CircleArea {
     static double circleArea(double radius) {
         final double PI = 3.14;
