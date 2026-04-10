@@ -8,4 +8,7 @@ public class Student {
         System.out.println("이름 : "+name+
                 " / 학년 : "+grade);
     }
+    double average() {
+        return (kor+eng+math)/3.0;
+    }
 }

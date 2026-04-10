@@ -12,5 +12,9 @@ public class StudentTest {
         student01.showInfo();
         student02.showInfo();
         student03.showInfo();
+        student01.kor=83;
+        student01.eng=77;
+        student01.math=43;
+        System.out.println(student01.average());
     }
 }
