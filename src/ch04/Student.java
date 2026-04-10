@@ -4,6 +4,13 @@ public class Student {
     String name="장성호";
     int grade=1;
     int kor,eng,math;
+    Student() {
+
+    }
+    Student(String name,int grade) {
+        this.name = name;
+        this.grade = grade;
+    }
     void showInfo(){
         System.out.println("이름 : "+name+
                 " / 학년 : "+grade);

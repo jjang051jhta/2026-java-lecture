@@ -8,7 +8,7 @@ public class StudentTest {
         Student student02 = new Student();
         student02.name="현빈";
         student02.grade=3;
-        Student student03 = new Student();
+        Student student03 = new Student("장성호",1);
         student01.showInfo();
         student02.showInfo();
         student03.showInfo();
