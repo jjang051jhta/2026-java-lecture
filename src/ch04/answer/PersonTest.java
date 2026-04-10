@@ -7,7 +7,6 @@ public class PersonTest {
         p01.age=30;
         p01.showInfo();
 
-
         Person p02 = new Person("현빈");
         p02.age=40;
         p02.showInfo();
