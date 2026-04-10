@@ -15,6 +15,7 @@ public class StudentTest {
         student01.kor=83;
         student01.eng=77;
         student01.math=43;
+        System.out.println(student01.total());
         System.out.println
                 (student01.average());
     }
