@@ -11,6 +11,13 @@ public class Car {
                 ("나의 차는 "+brand+"이고 현재 속도는 "+speed);
     }
     void accelerate() {
-        speed = speed + 10;
+        if(speed<300) {
+            speed = speed + 10;
+        }
+    }
+    void decelerate() {
+        if(speed>0) {
+            speed = speed - 10;
+        }
     }
 }
