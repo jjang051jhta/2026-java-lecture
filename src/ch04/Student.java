@@ -9,6 +9,7 @@ public class Student {
                 " / 학년 : "+grade);
     }
     double average() {
-        return (kor+eng+math)/3.0;
+        int temp = (int)((kor+eng+math)/3.0 * 100);
+        return temp/100.0;
     }
 }
