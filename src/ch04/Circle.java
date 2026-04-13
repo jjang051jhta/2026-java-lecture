@@ -10,8 +10,9 @@ public class Circle {
         System.out.println("생성자도 결국 함수다.");
         radius = 100;
     }
-    Circle(int _radius) {
-        radius = _radius;
+    Circle(int radius) {
+
+        this.radius = radius;
         System.out.println("나는 매개변수를 가지는 생성자 함수이다.");
     }
     Circle(String _name,int _radius) {
@@ -19,7 +20,8 @@ public class Circle {
         radius = _radius;
         name = _name;
     }
-
+    //생성자 오버로드
+    //this
     //f(x,y) = x+y;  f(3,4) = 3+4;
 
 

@@ -11,8 +11,5 @@ public class BookTest {
         Book book03 =
                 new Book("코스모스","리처드 파인만", 30000);
         book03.showInfo();
-
-
-
     }
 }
