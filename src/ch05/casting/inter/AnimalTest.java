@@ -1,4 +1,4 @@
-package ch05.casting.abs;
+package ch05.casting.inter;
 
 
 public class AnimalTest {
@@ -23,6 +23,12 @@ public class AnimalTest {
         for(Animal animal : animalArray) {
             animal.sound();
         }
+        Fly bird = new Bird();
+        bird.fly();
+        Fly flyChicken =  new Chicken();
+        flyChicken.fly();
+        Swimable nalchi = new Nalchi();
+        nalchi.swim();
 //        soundAnimal(cat);
 //        soundAnimal(dog);
 //        soundAnimal(caw);
