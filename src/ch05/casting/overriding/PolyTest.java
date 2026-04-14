@@ -3,6 +3,10 @@ package ch05.casting.overriding;
 
 public class PolyTest {
     static void main() {
+
+        Child child02 = (Child)(new Parent());
+        child02.method();
+
         //자식 변수가 자식 인스턴스를 참조
         Child child = new Child();
         System.out.println("Child => Child");
