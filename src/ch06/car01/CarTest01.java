@@ -6,5 +6,11 @@ public class CarTest01 {
         Sonata sonata = new Sonata();
         driver.setSonata(sonata);
         driver.drive();
+
+        Sorento sorento = new Sorento();
+        driver.setSonata(null);
+        driver.setSorento(sorento);
+        driver.drive();
+
     }
 }
