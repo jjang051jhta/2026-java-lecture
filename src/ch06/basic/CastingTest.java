@@ -7,5 +7,11 @@ public class CastingTest {
         // 부모를 자식타입으로 변경 down-casting
         Child child = (Child)poly;
         child.childMethod();
+
+        Parent parent = new Parent();
+        Child child02 = (Child) parent;
+        child02.childMethod();
+        //upcasting은 안전하다.
+        //downcasting은 위험하다.
     }
 }
