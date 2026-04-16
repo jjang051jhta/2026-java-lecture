@@ -14,5 +14,9 @@ public class Operator01 {
         System.out.println("a / b = " + div);
         int mod = a % b;
         System.out.println("a % b = " + mod);
+
+        String strNum01 = "10";
+        String strNum02 = "20";
+        System.out.println(strNum01 + strNum02);
     }
 }
