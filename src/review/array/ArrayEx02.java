@@ -22,6 +22,10 @@ public class ArrayEx02 {
                 productPriceArray[count] = price;
                 count++;
             } else if(menu==2) {
+                if(count==0) {
+                    System.out.println("등록된 제품이 없습니다.");
+                    continue;
+                }
                 System.out.println("상품 목록");
                 for(int i=0;i<count;i++) {
                     System.out.println(productNameArray[i]+" : "+productPriceArray[i]+"원");
