@@ -10,8 +10,11 @@ public class While01 {
 //        count++;
 //        System.out.println("현재 숫자는 : "+count);
         long start = System.nanoTime();
-        while(count<1000) {
+        while(count<100) {
             count++;
+            if(count%5==0) {
+                break;
+            }
             System.out.println("현재 숫자는 : "+count);
         }
         long end = System.nanoTime();
