@@ -3,10 +3,14 @@ package review.array;
 import java.util.Scanner;
 
 public class ArrayEx02 {
+    static void aa() {
+        System.out.println("aa");
+    }
     static void main() {
         String [] productNameArray = new String[10];
         int [] productPriceArray = new int[10];
         int count=0;
+        System.out.println(Math.PI);
         Scanner scanner = new Scanner(System.in);
         while(true) {
             System.out.println("1 : 상품 등록 | 2 : 상품 목록 | 3 : 종료 \n 메뉴를 선택하세요.");
