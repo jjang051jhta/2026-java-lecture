@@ -1,5 +1,7 @@
 package review.clazz.constructor;
 
+
+
 public class StudentMain {
     static void main() {
         Student student01 = new Student();
@@ -10,6 +12,5 @@ public class StudentMain {
         Student student03 = new Student("학생03");
         Student student04 = new Student("학생04",17);
         System.out.println(student03.name);
-
     }
 }
