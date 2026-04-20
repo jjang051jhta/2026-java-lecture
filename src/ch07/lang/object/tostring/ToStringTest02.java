@@ -6,6 +6,7 @@ public class ToStringTest02 {
         Dog dog = new Dog("댕댕이",3);
         System.out.println(car.toString());
         System.out.println(dog.toString());
-        //ObjectPrinter.print(car);
+        ObjectPrinter.print(car);
+        ObjectPrinter.print(dog);
     }
 }

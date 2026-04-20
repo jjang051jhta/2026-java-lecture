@@ -8,3 +8,4 @@ public class ObjectPrinter {
         System.out.println(string);
     }
 }
+//추상적인 것에 의존한다.
