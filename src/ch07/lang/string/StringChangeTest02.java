@@ -2,6 +2,7 @@ package ch07.lang.string;
 
 public class StringChangeTest02 {
     static void main() {
+        //Wrapper class
         String str = "      Java Programming ";
         System.out.println("소문자로 변환 : "+str.toLowerCase());
         System.out.println("대문자로 변환 : "+str.toUpperCase());
