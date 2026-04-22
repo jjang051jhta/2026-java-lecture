@@ -3,6 +3,7 @@ package ch08.enumeration.ex01;
 public class StringGradeTest02 {
     static void main() {
         DiscountService discountService = new DiscountService();
+        //type을 안정성이 훼손
         int price = 10000;
         int vip = discountService.discount("VIP",price);
         int gold = discountService.discount("gold",price);
