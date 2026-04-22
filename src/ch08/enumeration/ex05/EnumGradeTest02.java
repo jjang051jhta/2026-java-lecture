@@ -1,7 +1,6 @@
 package ch08.enumeration.ex05;
 
 
-
 public class EnumGradeTest02 {
     static void main() {
         //Grade vip = new Grade();
