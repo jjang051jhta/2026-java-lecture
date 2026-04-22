@@ -7,6 +7,8 @@ public class Answer02 {
         //Grade grade = Grade.GOLD;
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
+        Grade grade = Grade.valueOf(input); //String enum으로 변경
+        //System.out.println(Grade.BASIC.name());
         switch (grade) {
             case BASIC:
                 System.out.println("BASIC");
