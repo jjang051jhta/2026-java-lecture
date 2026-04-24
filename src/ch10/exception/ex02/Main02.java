@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Main02 {
     static void main() {
         //NetworkService02 networkService = new NetworkService02();
-        NetworkService02_02 networkService = new NetworkService02_02();
+        //NetworkService02_02 networkService = new NetworkService02_02();
+        NetworkService02_03 networkService = new NetworkService02_03();
         Scanner scanner = new Scanner(System.in);
         while(true) {
             System.out.print("전송할 문자 : ");
