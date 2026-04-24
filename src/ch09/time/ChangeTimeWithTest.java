@@ -21,6 +21,5 @@ public class ChangeTimeWithTest {
         System.out.println("다음 금요일 : "+with01);
         LocalDateTime with02 =  chDt.with(TemporalAdjusters.lastInMonth(DayOfWeek.SUNDAY));
         System.out.println("이번 달 마지막 일요일 : "+with02);
-
     }
 }
