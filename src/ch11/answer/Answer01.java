@@ -1,9 +1,6 @@
 package ch11.answer;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Answer01 {
     static void main() {
@@ -11,11 +8,16 @@ public class Answer01 {
         System.out.println("정수를 숫자는 입력하세요");
         List<Integer> nums = new ArrayList<>();
         while (true) {
-            int num = scanner.nextInt();
-            if (num == -1) {
-                break;
+            try {
+                int num = scanner.nextInt();
+                if (num == -1) {
+                    break;
+                }
+                nums.add(num);
+            } catch (InputMismatchException e) {
+                System.out.println("정수만 입력하세요");
+                scanner.next();
             }
-            nums.add(num);
         }
         //System.out.println(nums);
         Iterator<Integer> iterator = nums.iterator();
