@@ -30,8 +30,9 @@ public class Answer03 {
             Integer population = countryMap.get(country);
             if(population == null) {
                 System.out.println("없는 나라입니다.");
+            } else {
+                System.out.println(country + "의 인구는 " + population);
             }
-            System.out.println(country+"의 인구는 "+population);
         }
     }
 }
