@@ -27,12 +27,19 @@ public class User implements Comparable<User> {
 
     @Override
     public int compareTo(User o) {
-        if (this.age < o.age) {
-            return -1;
-        } else if (this.age > o.age) {
-            return 1;
-        } else {
-            return 0;
+        //id가 같으면 나이 많은게 먼저 나오게.....
+        //id 구현을  먼저하고 만약 id가 같으면 나이 정렬되게....
+        int result = this.id.compareTo(o.id);
+        if(result==0) {
+          return Integer.compare(o.age,this.age);
         }
+        return result;
+//        if (this.age < o.age) {
+//            return -1;
+//        } else if (this.age > o.age) {
+//            return 1;
+//        } else {
+//            return 0;
+//        }
     }
 }
