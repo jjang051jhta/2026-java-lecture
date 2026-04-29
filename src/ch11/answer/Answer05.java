@@ -40,6 +40,11 @@ class Student {
         this.score = score;
     }
 
+    public Student(String name, double score) {
+        this.name = name;
+        this.score = score;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
