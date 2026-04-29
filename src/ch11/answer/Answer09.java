@@ -1,8 +1,6 @@
 package ch11.answer;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Answer09 {
     static void main() {
@@ -14,10 +12,24 @@ public class Answer09 {
         nationMap.put("영국", new Nation("영국","런던"));
         nationMap.put("중국", new Nation("중국","베이징"));
         nationMap.put("일본", new Nation("일본","도쿄"));
+        List<Nation> nationList = new ArrayList<>(nationMap.values());
         for(Map.Entry<String,Nation> entry:nationMap.entrySet()) {
             String country = entry.getKey();
             Nation nation = entry.getValue();
             System.out.println(nation.toString());
+        }
+        Random random = new Random();
+        while(true) {
+            int index =  random.nextInt(nationList.size());
+            Nation nation = nationList.get(index);
+            System.out.println(nation.name+"의 수도는?");
+            String input = scanner.nextLine();
+            if(input.equals("그만")) break;
+            if(input.equals(nation.capital)) {
+                System.out.println("정답");
+            } else {
+                System.out.println("땡 / 정답은 "+nation.capital+"입니다.");
+            }
         }
     }
 }
