@@ -39,4 +39,14 @@ class Student {
         this.id = id;
         this.score = score;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", department='" + department + '\'' +
+                ", id=" + id +
+                ", score=" + score +
+                '}';
+    }
 }
