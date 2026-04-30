@@ -1,28 +1,23 @@
 package ch12.buffer;
 
+import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 
-public class CreateFile02 {
+public class CreateFile03 {
 
     static void main() throws IOException {
         FileOutputStream fos = new FileOutputStream(BufferedConstant.FILE_NAME);
         byte[] buffer = new byte[BufferedConstant.BUFFER_SIZE];
-        int bufferIndex = 0;
+        BufferedOutputStream bos =  new BufferedOutputStream(fos,BufferedConstant.BUFFER_SIZE); // 보조 스트림
+
         long startTime = System.currentTimeMillis();
         for (int i = 0; i < BufferedConstant.FILE_SIZE; i++) {
-            //bufferIndex++;
-            buffer[bufferIndex++] = 1;
-            if (bufferIndex == BufferedConstant.BUFFER_SIZE) {
-                fos.write(buffer);
-                bufferIndex = 0;
-            }
+            bos.write(1);
+
         }
-        if (bufferIndex > 0) {
-            fos.write(buffer, 0, bufferIndex);
-        }
-        fos.close();
+        bos.close();
         long endTime = System.currentTimeMillis();
         System.out.println("File Created : " + BufferedConstant.FILE_NAME);
         System.out.println("File Size : " + BufferedConstant.FILE_SIZE);
