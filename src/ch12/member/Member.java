@@ -1,10 +1,15 @@
 package ch12.member;
 
-public class Member {
+import java.io.Serializable;
+
+
+//직렬화  객체를 byte로 저장
+//역직렬화  byte를 객체로 변환
+public class Member implements Serializable {
     private String id;
     private String name;
     private int age;
-
+    //new Member();
     public Member() {
     }
 
