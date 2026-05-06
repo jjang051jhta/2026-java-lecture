@@ -3,6 +3,9 @@ package ch12.files;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.nio.file.attribute.BasicFileAttributes;
 
 public class NewFilesMain {
     static void main() throws IOException {
@@ -33,7 +36,22 @@ public class NewFilesMain {
         //8. size()  크기 반환...
         System.out.println("File size : "+Files.size(file)+"byte");
 
+        //9. move() 파일의 이름을 변경하거나 이동
+        Path newFile = Paths.get("temp/newFile.txt");
+        Files.move(file,newFile, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File moved/renamed");
 
+        //10. getLastModifiedTime();  마지막 수정된 시간 반환
+        System.out.println("last Modified Time : "+Files.getLastModifiedTime(newFile));
+
+        //11. 전부 다  출력
+        BasicFileAttributes attributes = Files.readAttributes(newFile,BasicFileAttributes.class);
+        System.out.println("=============Attributes=============");
+        System.out.println("Creation Time : "+attributes.creationTime());
+        System.out.println("is directory : "+attributes.isDirectory());
+        System.out.println("is regular file : "+attributes.isRegularFile());
+        System.out.println("symbolic link : "+attributes.isSymbolicLink());
+        System.out.println("size : "+attributes.size());
 
     }
 }
