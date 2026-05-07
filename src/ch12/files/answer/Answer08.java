@@ -10,7 +10,7 @@ import java.time.ZoneId;
 
 public class Answer08 {
     static void main() throws IOException {
-        Path dir = Paths.get("C:\\Users\\tjoeunis205\\Downloads");
+        Path dir = Paths.get("C:\\Users\\tjoeunis205\\Downloads").toRealPath();
         LocalDateTime limit =  LocalDateTime.now().minusDays(7);
         DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
         for(Path path:stream) {
