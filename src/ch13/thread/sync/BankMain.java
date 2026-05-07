@@ -6,7 +6,8 @@ import static ch13.utils.ThreadUtil.sleep;
 
 public class BankMain {
     static void main() throws InterruptedException {
-        BankAccount bankAccount = new BankAccount01(1000);
+        //BankAccount bankAccount = new BankAccount01(1000);
+        BankAccount bankAccount = new BankAccount02(1000);
         Thread thread01 = new Thread(new WithDrawTask(bankAccount,800),"thread01");
         Thread thread02 = new Thread(new WithDrawTask(bankAccount,800),"thread02");
         thread01.start();
