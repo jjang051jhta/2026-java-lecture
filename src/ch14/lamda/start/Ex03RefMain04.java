@@ -1,5 +1,7 @@
 package ch14.lamda.start;
 
+import ch14.lamda.Procedure;
+
 import java.util.Random;
 
 public class Ex03RefMain04 {
