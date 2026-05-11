@@ -86,6 +86,40 @@ public class TerminalOperationMain {
         System.out.println("최대 값은 : " + max.get());
         System.out.println();
 
+        System.out.println("11. findFirst() 처음 만나는 값");
+        int first = nums.stream()
+                .filter(n -> n > 5)
+                .findFirst()
+                .get();
+        System.out.println("5보다 큰 첫번째 숫자 : " + first);
+        System.out.println();
+
+        System.out.println("12. findAny() 아무거나 하나 찾기");
+        int any = nums.stream()
+                .filter(n -> n > 5)
+                .findAny()
+                .get();
+        System.out.println("5보다 큰 아무 숫자 : " + any);
+        System.out.println();
+
+        System.out.println("13. anyMath() 하나라도 만족을 하면 참");
+        boolean hasEven = nums.stream()
+                .anyMatch(n -> n % 2 == 0);
+        System.out.println("짝수를 하나라도 폼함하고 있는지 : " + hasEven);
+        System.out.println();
+
+        System.out.println("14. allMath() 모든 숫자가 만족을 하면 참");
+        boolean allMatch = nums.stream()
+                .allMatch(n -> n > 0);
+        System.out.println("모든 숫자가 양수인지 : " + allMatch);
+        System.out.println();
+
+        System.out.println("15. noneMath() 조건을 만족하는 요소가 없는지");
+        boolean noneMatch = nums.stream()
+                .noneMatch(n -> n < 0);
+        System.out.println("음수가 없는지 : " + noneMatch);
+        System.out.println();
+
 
     }
 }
